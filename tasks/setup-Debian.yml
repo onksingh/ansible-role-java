@@ -23,5 +23,5 @@
     state: present
     default_release: jessie-backports
     update_cache: true
-    install_recommends: false
+    cache_valid_time: 300
   when: ansible_distribution == 'Debian'
