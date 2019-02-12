@@ -17,6 +17,12 @@
     update_cache: true
   when: ansible_distribution == 'Ubuntu'
 
+- name: Add openjdk-8-jdk repo for Debian
+  apt_repository:
+    repo: 'deb http://http.debian.net/debian jessie-backports main'
+    state: present
+  when: ansible_distribution == 'Debian'
+
 - name: Ensure Java is installed for Debian
   apt:
     name: "{{ java_packages }}"
