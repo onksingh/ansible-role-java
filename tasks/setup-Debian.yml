@@ -19,7 +19,7 @@
 
 - name: Add openjdk-8-jdk repo for Debian
   apt_repository:
-    repo: deb http://archive.debian.org/debian jessie-backports main
+    repo: deb http://archive.debian.net/debian jessie-backports main
     state: present
   when: ansible_distribution == 'Debian'
 
